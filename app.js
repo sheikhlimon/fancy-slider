@@ -54,7 +54,7 @@ const toggleSpinner = () => {
 let slideIndex = 0;
 const selectItem = (event, img) => {
   let element = event.target;
-  element.classList.add('added');
+  element.classList.toggle('added');
   
  
   let item = sliders.indexOf(img);
@@ -62,7 +62,6 @@ const selectItem = (event, img) => {
     sliders.push(img);
   } else {
     sliders.splice(item, 1);
-    element.classList.remove('added');
   }
 }
 
